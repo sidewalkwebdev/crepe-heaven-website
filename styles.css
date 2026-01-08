@@ -1,8 +1,10 @@
 :root {
-  --crepe-yellow: #f4c430; /* Saffron Yellow */
-  --crepe-light-yellow: #fff8e1; /* Very light buttery background */
-  --crepe-dark: #3d3d3d; /* Softer black (Charcoal) */
-  --crepe-brown: #5d4037; /* Nutella-ish brown for accents */
+  --crepe-yellow: #ffd966; /* Softer butter yellow */
+  --crepe-light-yellow: #fffef7; /* Creamy light background */
+  --crepe-dark: #4a4a4a; /* Softer charcoal */
+  --crepe-brown: #8b6f47; /* Warm caramel brown */
+  --crepe-pink: #ffeef8; /* Soft pink accent */
+  --crepe-peach: #ffe8d6; /* Peachy warmth */
 }
 
 body {
@@ -37,16 +39,17 @@ h5,
 
 /* Navbar */
 .navbar {
-  background-color: rgba(255, 248, 225, 0.95);
-  /* Removed backdrop blur to improve clarity and performance */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 254, 247, 0.98);
+  box-shadow: 0 4px 20px rgba(255, 217, 102, 0.15);
   z-index: 1040;
+  border-bottom: 3px solid var(--crepe-yellow);
 }
 
 .navbar-brand {
-  letter-spacing: -0.5px;
+  letter-spacing: 1px;
   color: var(--crepe-dark);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  text-shadow: 2px 2px 0px rgba(255, 217, 102, 0.3);
 }
 
 .nav-link {
@@ -55,76 +58,100 @@ h5,
   margin: 0 10px;
   text-transform: uppercase;
   font-size: 0.85rem;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  border-radius: 20px;
+  padding: 8px 16px !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--crepe-yellow);
+  transform: translateY(-2px);
 }
 
 /* Yellow Button Styles */
 .btn-yellow {
   background-color: var(--crepe-yellow);
   color: var(--crepe-dark);
-  border: 2px solid var(--crepe-yellow);
+  border: 3px solid var(--crepe-yellow);
   border-radius: 50px;
-  padding: 10px 30px;
+  padding: 12px 35px;
   font-weight: 700;
   transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 217, 102, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-yellow:hover {
-  background-color: transparent;
-  border-color: var(--crepe-yellow);
+  background-color: #ffcc33;
+  border-color: #ffcc33;
   color: var(--crepe-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 217, 102, 0.5), inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-yellow:active {
+  transform: translateY(-1px);
 }
 
 /* Hero Section */
 .hero-section {
   height: 85vh;
-  /* Use fixed background only on larger screens to prevent mobile scroll issues */
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  background: linear-gradient(135deg, rgba(255, 217, 102, 0.2), rgba(255, 232, 214, 0.3)),
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
     url("https://s3-media0.fl.yelpcdn.com/bphoto/h7isP53oggZYn_5mv9gC3A/o.jpg");
   background-size: cover;
   background-position: center;
   color: white;
   position: relative;
+  border-bottom: 5px solid var(--crepe-yellow);
 }
 
 .hero-title {
   font-size: 4rem;
   line-height: 1.1;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 0px rgba(255, 217, 102, 0.5), 5px 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .eyebrow {
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--crepe-yellow);
+  color: white;
   display: block;
   margin-bottom: 15px;
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--crepe-yellow);
   display: inline-block;
-  padding: 5px 15px;
-  border-radius: 20px;
+  padding: 8px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(255, 217, 102, 0.5);
+  border: 2px solid white;
 }
 
 /* Info Strip */
 .info-strip {
-  background-color: var(--crepe-dark);
-  color: white;
+  background: linear-gradient(135deg, var(--crepe-peach) 0%, var(--crepe-pink) 100%);
+  color: var(--crepe-dark);
   font-family: "Quicksand", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
 }
 
 /* Marquee */
 .marquee-container {
   overflow: hidden;
   white-space: nowrap;
-  background: var(--crepe-yellow);
+  background: linear-gradient(90deg, var(--crepe-yellow) 0%, #ffed99 50%, var(--crepe-yellow) 100%);
   color: var(--crepe-dark);
-  padding: 12px 0;
+  padding: 14px 0;
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
   border-bottom: 4px solid white;
+  border-top: 4px solid white;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .marquee-content {
@@ -143,17 +170,37 @@ h5,
 
 /* Menu Cards */
 .menu-card {
-  border: none;
-  border-radius: 20px;
+  border: 4px solid var(--crepe-yellow);
+  border-radius: 25px;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  box-shadow: 0 8px 25px rgba(255, 217, 102, 0.3), 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
   background: white;
   height: 100%;
+  position: relative;
 }
 
 .menu-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) rotate(-1deg);
+  box-shadow: 0 12px 35px rgba(255, 217, 102, 0.4), 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, var(--crepe-yellow), var(--crepe-peach));
+  border-radius: 25px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.menu-card:hover::before {
+  opacity: 0.5;
 }
 
 .menu-img-container {
@@ -168,12 +215,14 @@ h5,
 }
 
 .price-badge {
-  background-color: var(--crepe-yellow);
+  background: linear-gradient(135deg, var(--crepe-yellow) 0%, #ffed99 100%);
   color: var(--crepe-dark);
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 800;
   font-family: "Quicksand", sans-serif;
+  box-shadow: 0 3px 10px rgba(255, 217, 102, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  border: 2px solid white;
 }
 
 /* Footer Styles */
@@ -357,5 +406,200 @@ h5,
   /* Center menu filter pills on mobile */
   .nav-pills {
     justify-content: center !important;
+  }
+}
+
+/* =========================================
+   MENU PAGE STYLES
+   ========================================= */
+
+/* Menu Header */
+.menu-header {
+  background: linear-gradient(135deg, var(--crepe-yellow) 0%, var(--crepe-peach) 50%, var(--crepe-pink) 100%);
+  padding: 70px 0 50px;
+  margin-bottom: 0;
+  box-shadow: 0 6px 25px rgba(255, 217, 102, 0.3);
+  border-bottom: 5px solid white;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-header::before {
+  content: '✨';
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  font-size: 3rem;
+  opacity: 0.3;
+  animation: float 3s ease-in-out infinite;
+}
+
+.menu-header::after {
+  content: '🥞';
+  position: absolute;
+  bottom: 20px;
+  right: 10%;
+  font-size: 3rem;
+  opacity: 0.3;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+.menu-header h1 {
+  color: var(--crepe-dark);
+  margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0px rgba(255, 255, 255, 0.5);
+}
+
+.menu-header .lead {
+  color: var(--crepe-brown);
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-family: "Caveat", cursive;
+}
+
+/* Sticky Navigation Pills */
+.sticky-nav {
+  position: sticky;
+  top: 56px;
+  background: linear-gradient(180deg, white 0%, var(--crepe-light-yellow) 100%);
+  z-index: 1030;
+  border-bottom: 4px solid var(--crepe-yellow);
+  border-top: 4px solid var(--crepe-yellow);
+  box-shadow: 0 4px 20px rgba(255, 217, 102, 0.2);
+}
+
+.nav-pills .nav-link {
+  color: var(--crepe-dark);
+  font-weight: 700;
+  border-radius: 30px;
+  padding: 12px 24px;
+  margin: 5px;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.nav-pills .nav-link:hover {
+  background: linear-gradient(135deg, var(--crepe-peach), var(--crepe-pink));
+  border-color: var(--crepe-yellow);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 217, 102, 0.3);
+}
+
+.nav-pills .nav-link.active {
+  background: linear-gradient(135deg, var(--crepe-yellow), #ffed99);
+  color: var(--crepe-dark);
+  border-color: white;
+  box-shadow: 0 6px 20px rgba(255, 217, 102, 0.5), inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Category Sections */
+section[id] {
+  padding: 60px 0;
+  scroll-margin-top: 120px;
+}
+
+.category-title {
+  color: var(--crepe-dark);
+  font-weight: 800;
+  margin-bottom: 40px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: linear-gradient(135deg, var(--crepe-yellow), var(--crepe-peach));
+  border-radius: 50px;
+  display: inline-block;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px rgba(255, 217, 102, 0.4);
+  border: 4px solid white;
+}
+
+/* Menu Items */
+.menu-item {
+  padding: 20px 15px;
+  border-bottom: 2px dotted rgba(255, 217, 102, 0.3);
+  transition: all 0.3s ease;
+  border-radius: 15px;
+}
+
+.menu-item:hover {
+  background: linear-gradient(90deg, rgba(255, 232, 214, 0.3), rgba(255, 238, 248, 0.3));
+  padding-left: 25px;
+  border-radius: 15px;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(255, 217, 102, 0.2);
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--crepe-dark);
+  font-family: "Quicksand", sans-serif;
+  flex: 1;
+  padding-right: 20px;
+}
+
+.menu-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--crepe-brown);
+  font-family: "Quicksand", sans-serif;
+  white-space: nowrap;
+}
+
+/* Gluten-free badge styling */
+.badge.bg-secondary {
+  background-color: var(--crepe-dark) !important;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+/* Mobile menu adjustments */
+@media (max-width: 767px) {
+  .menu-header {
+    padding: 40px 0 30px;
+  }
+  
+  .menu-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .category-title {
+    font-size: 2rem;
+  }
+  
+  .menu-item-title {
+    font-size: 1rem;
+  }
+  
+  .menu-price {
+    font-size: 1.1rem;
+  }
+  
+  .sticky-nav {
+    top: 56px;
+  }
+  
+  .nav-pills .nav-link {
+    font-size: 0.75rem;
+    padding: 8px 12px;
+    margin: 3px;
   }
 }
