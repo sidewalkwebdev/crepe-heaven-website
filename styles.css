@@ -31,24 +31,8 @@ h5,
 }
 
 /* Promo Bar and Menu Navbar Offsets */
-.promo-bar {
-  background-color: var(--crepe-yellow);
-  color: var(--crepe-dark);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 40px;
-  padding: 0 12px;
-  z-index: 1045;
-}
-
-.menu-navbar {
-  top: 40px; /* Offset under the promo bar to avoid overlap */
-}
-
 .nav-spacer {
-  height: 96px; /* Accounts for promo bar + navbar height where used */
+  height: 56px; /* Navbar height offset */
 }
 
 /* Navbar */
@@ -96,7 +80,7 @@ h5,
   height: 85vh;
   /* Use fixed background only on larger screens to prevent mobile scroll issues */
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("https://images.unsplash.com/photo-1519676867240-f03562e64548?q=80&w=2000&auto=format&fit=crop");
+    url("https://s3-media0.fl.yelpcdn.com/bphoto/h7isP53oggZYn_5mv9gC3A/o.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -368,5 +352,10 @@ h5,
   /* Center social icons */
   .social-icons {
     justify-content: center;
+  }
+
+  /* Center menu filter pills on mobile */
+  .nav-pills {
+    justify-content: center !important;
   }
 }
