@@ -1,0 +1,372 @@
+:root {
+  --crepe-yellow: #f4c430; /* Saffron Yellow */
+  --crepe-light-yellow: #fff8e1; /* Very light buttery background */
+  --crepe-dark: #3d3d3d; /* Softer black (Charcoal) */
+  --crepe-brown: #5d4037; /* Nutella-ish brown for accents */
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--crepe-light-yellow);
+  color: var(--crepe-dark);
+}
+
+/* Typography Updates */
+h1,
+h2,
+h3,
+h4,
+h5,
+.navbar-brand,
+.btn,
+.logo-font {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+}
+
+.handwritten {
+  font-family: "Caveat", cursive;
+  font-size: 1.5rem;
+  color: var(--crepe-brown);
+}
+
+/* Promo Bar and Menu Navbar Offsets */
+.promo-bar {
+  background-color: var(--crepe-yellow);
+  color: var(--crepe-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 12px;
+  z-index: 1045;
+}
+
+.menu-navbar {
+  top: 40px; /* Offset under the promo bar to avoid overlap */
+}
+
+.nav-spacer {
+  height: 96px; /* Accounts for promo bar + navbar height where used */
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(255, 248, 225, 0.95);
+  /* Removed backdrop blur to improve clarity and performance */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1040;
+}
+
+.navbar-brand {
+  letter-spacing: -0.5px;
+  color: var(--crepe-dark);
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: var(--crepe-dark);
+  font-weight: 600;
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+/* Yellow Button Styles */
+.btn-yellow {
+  background-color: var(--crepe-yellow);
+  color: var(--crepe-dark);
+  border: 2px solid var(--crepe-yellow);
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-yellow:hover {
+  background-color: transparent;
+  border-color: var(--crepe-yellow);
+  color: var(--crepe-dark);
+}
+
+/* Hero Section */
+.hero-section {
+  height: 85vh;
+  /* Use fixed background only on larger screens to prevent mobile scroll issues */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1519676867240-f03562e64548?q=80&w=2000&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--crepe-yellow);
+  display: block;
+  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+/* Info Strip */
+.info-strip {
+  background-color: var(--crepe-dark);
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+}
+
+/* Marquee */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--crepe-yellow);
+  color: var(--crepe-dark);
+  padding: 12px 0;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  border-bottom: 4px solid white;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Menu Cards */
+.menu-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  background: white;
+  height: 100%;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-img-container {
+  height: 250px;
+  overflow: hidden;
+}
+
+.menu-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.price-badge {
+  background-color: var(--crepe-yellow);
+  color: var(--crepe-dark);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Footer Styles */
+.footer-section {
+  background-color: var(--crepe-dark);
+  color: #adb5bd;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+.footer-heading {
+  color: white;
+  margin-bottom: 25px;
+  font-size: 1.25rem;
+}
+
+.text-gold {
+  color: var(--crepe-yellow) !important;
+}
+
+.contact-link,
+.footer-link {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-link:hover,
+.footer-link:hover {
+  color: var(--crepe-yellow);
+}
+
+/* Map Buttons */
+.btn-map {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.apple-map {
+  background-color: #212529;
+  color: white;
+  border: 1px solid #495057;
+}
+.apple-map:hover {
+  background-color: white;
+  color: black;
+}
+.google-map {
+  background-color: white;
+  color: #3d3d3d;
+  border: 1px solid white;
+}
+.google-map:hover {
+  background-color: #e9ecef;
+  color: black;
+}
+
+/* Review Buttons */
+.btn-yelp {
+  background-color: #d32323;
+  color: white;
+  font-weight: bold;
+}
+.btn-yelp:hover {
+  color: white;
+  opacity: 0.9;
+}
+.btn-google {
+  background-color: white;
+  color: #4285f4;
+  font-weight: bold;
+}
+.btn-google:hover {
+  background-color: #f1f1f1;
+  color: #4285f4;
+}
+
+/* Social Icons */
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: var(--crepe-yellow);
+  color: var(--crepe-dark);
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (Media Queries)
+   ========================================= */
+
+/* Tablets and Mobile Phones (Width < 992px) */
+@media (max-width: 991px) {
+  .hero-section {
+    /* Allow height to grow if content is large */
+    height: auto;
+    min-height: 70vh;
+    padding: 100px 0;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* Mobile Phones (Width < 768px) */
+@media (max-width: 767px) {
+  /* Fix Navigation padding */
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    min-height: 85vh; /* Taller on mobile to fill screen */
+    background-attachment: scroll; /* Fixes mobile scrolling jank */
+  }
+
+  .hero-title {
+    font-size: 2.8rem; /* Smaller font so words don't break awkwardly */
+  }
+
+  .eyebrow {
+    font-size: 0.8rem;
+  }
+
+  .handwritten {
+    font-size: 1.2rem;
+  }
+
+  /* Info Strip */
+  .info-strip {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  .footer-section {
+    padding-top: 50px;
+    text-align: center; /* Center align footer on mobile */
+  }
+
+  .footer-heading {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  /* Center the contact icons in footer on mobile */
+  .footer-contact-item {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Re-align map buttons to center */
+  .map-buttons {
+    justify-content: center;
+  }
+
+  /* Center social icons */
+  .social-icons {
+    justify-content: center;
+  }
+}
